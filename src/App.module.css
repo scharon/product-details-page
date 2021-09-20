@@ -1,3 +1,6 @@
+body{
+  font-family: 'source sans Pro', sans-serif ;
+}
 
 .Topbar {
   width: 100%;
@@ -27,16 +30,129 @@
 
 .ProductPreview{
   width: 50%; /*diviser l'ecran en 2*/
+  position: relative;
 }
 
 /* pour que le l'image reste du coter du container ProductPreview*/
 .ProductPreview > img {
   width: 100%;
 }
+
+.TimeSection {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.HeartBeatSection {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.HeartBeatSection > i{
+  color: red;
+  animation: beat 1s infinite;
+}
+
+/* Beating Heart */
+@keyframes beat{
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* le HeartBeatSection qui est dans le p  */
+.HeartBeatSection > p { 
+  /* margin-top: 10px; */
+  margin-bottom: 10px;
+}
+
 .ProductData {
   width: 50%;
 }
 
 .productTitle {
-  font-family: 'source sans Pro', sans-serif ;
+  font-size: 40px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.ProductDescription{
+  font-size: 20px;
+  color: rgba(0, 0, 0,0.8); /*gris façon */
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.ProductSelect {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.productImage {
+   width: 100px;
+  max-width: 80px;
+
+  border: 2px solid transparent; 
+  border-radius: 8px; /* arrondir les contours  */
+  margin-right: 12px; /*pour avoir les espaces entre les carreaux*/
+  cursor: pointer; /*pour le petit doigt*/
+}
+
+.SelectedProductImage {
+  border: 2px solid teal; 
+}
+
+.FeatureItem {
+  min-width: 80px;
+  background-color: gainsboro;
+  border-radius: 8px;
+  border: 0; /*Pas de trait*/
+  margin-right: 12px;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: content-box;
+
+  padding: 12px 24px;
+  font-weight: 600; 
+}
+
+.selectedFeatureItem {
+  color: white;
+  background-color: gray;
+}
+
+.BuyButton {
+  background-color: teal;
+  border: 0;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin-top: 24px;
+  cursor: pointer;
+  
+
+  padding: 12px 24px;
+  font-weight: 600; 
 }
