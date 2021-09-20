@@ -5,7 +5,7 @@
   padding: 24px 48px 12px;
   text-align: center;
 
-  /*Le code pour fixer la bare on the top*/
+  /*Topbar fixed on the top*/
   position: fixed;
   top: 0;
   left: 0;
@@ -13,4 +13,30 @@
 
 .Topbar > img {
   width: 100px;
+}
+
+.MainContainer {
+  padding: 4% 12%;
+  margin-top: 32px;
+  box-sizing: border-box; /*pour avoir */
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.ProductPreview{
+  width: 50%; /*diviser l'ecran en 2*/
+}
+
+/* pour que le l'image reste du coter du container ProductPreview*/
+.ProductPreview > img {
+  width: 100%;
+}
+.ProductData {
+  width: 50%;
+}
+
+.productTitle {
+  font-family: 'source sans Pro', sans-serif ;
 }
