@@ -11,17 +11,22 @@ const ProductPreview = (props) => {
 
     return (
         <div className = {classes.ProductPreview}>
-          <img src = "https://imgur.com/iOeUBV7.png" alt = "Product Preview"></img>
-
-          <div className= {classes.TimeSection}>
-             {/* Current Time / date actuelle */}
-             <p>{`${currentHour}:${currentMinute} `}</p>
-          </div>
-
-          <div className= {classes.HeartBeatSection}>         
-             <i class="fas fa-heartbeat"></i>
-             <p>78</p>
-          </div>
+          <img src = {props.currentPreviewImage} alt = "Product Preview"></img>
+          
+          {/* If HeartBeatSection is true (?) then render the HeartBeatSection else (:) render the time section */}
+          {
+            props.showHeartbeatSection ?
+              <div className= {classes.HeartBeatSection}>         
+                <i class="fas fa-heartbeat"></i>
+                <p>78</p>
+              </div>
+            :
+              <div className= {classes.TimeSection}>
+                {/* Current Time / date actuelle */}
+                <p>{`${currentHour}:${currentMinute} `}</p>
+              </div>
+           
+          }
 
         </div>
     );
